@@ -17,15 +17,15 @@ fun main() = application {
         val font = loadFont("data/fonts/default.otf", 64.0)
 
         extend {
-            drawer.drawStyle.colorMatrix = tint(ColorRGBa.WHITE.shade(0.2))
+//            drawer.drawStyle.colorMatrix = tint(ColorRGBa.WHITE.shade(0.2))
             drawer.image(image)
 
-            drawer.fill = ColorRGBa.PINK
-            drawer.circle(cos(seconds) * width / 2.0 + width / 2.0, sin(0.5 * seconds) * height / 2.0 + height / 2.0, 140.0)
-
-            drawer.fontMap = font
-            drawer.fill = ColorRGBa.WHITE
-            drawer.text("OPENRNDR", width / 2.0, height / 2.0)
+//            drawer.fill = ColorRGBa.PINK
+//            drawer.circle(cos(seconds) * width / 2.0 + width / 2.0, sin(1.2 * seconds) * height / 2.0 + height / 2.0, 140.0)
+//
+//            drawer.fontMap = font
+//            drawer.fill = ColorRGBa.WHITE
+//            drawer.text("OPENRNDR", width / 2.0, height / 2.0)
         }
     }
 }
