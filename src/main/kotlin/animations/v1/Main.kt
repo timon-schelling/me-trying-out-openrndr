@@ -86,7 +86,6 @@ class TrisolarExtension(
         drawer.fill = null
         drawer.strokeWeight = 3.0
         drawer.lineCap = LineCap.ROUND
-        color = color.toHSLa().run { copy(l = min(max(l + Random.double(-.04, .04), 0.1), 0.9)) }.shiftHue(Random.double(-10.0, 10.0)).toRGBa()
         drawer.stroke = color
         val centerX = width / 2
         val centerY = height / 2
@@ -151,10 +150,10 @@ fun main() = application {
         backgroundColor = ColorRGBa.BLACK
         extend(Screenshots())
         extend(NoClear())
-        extend(FadeoutExtension(0.05, BlendMode.SUBTRACT))
+        extend(FadeoutExtension(0.08, BlendMode.SUBTRACT))
         val travelSpeed = 1.0
-        val radius = max(width, height).toDouble() / 1.6
+        val radius = min(width, height).toDouble() / 2.2
         Random.seed = Instant.now().nano.toString()
-        extend(TrisolarExtension(1000, ColorRGBa.fromHex("#00FF18").toHSLa().shiftHue(Random.double(0.0,360.0)).toRGBa(), radius, travelSpeed, Point(), 5, true))
+        extend(TrisolarExtension(500, ColorRGBa.WHITE, radius, travelSpeed, Point(), 2, true))
     }
 }
