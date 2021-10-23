@@ -7,7 +7,7 @@ import org.gradle.nativeplatform.platform.internal.DefaultNativePlatform
 group = "org.openrndr.template"
 version = "0.3.18"
 
-val applicationMainClass = "animations.v1.MainKt"
+val applicationMainClass = "animations.v18.MainKt"
 
 /*  Which additional (ORX) libraries should be added to this project. */
 val orxFeatures = setOf(
